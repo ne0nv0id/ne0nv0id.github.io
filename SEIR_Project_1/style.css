@@ -2,12 +2,16 @@
     border: 1px solid red;
 } */
 body{
-    background-color: darkgrey;
+    background-color: #2b2e30;
 }
 /* header styling */
 header{
     text-align: center;
     font-family: 'Concert One', cursive;
+}
+h1{
+    color: yellow;
+    text-shadow: 3px 3px black;
 }
 /* setting sizes for page elements */
 #main{
@@ -26,9 +30,10 @@ aside{
 #character-buttons{
     width: 60%;
     height: 100px;
-    margin-left:20%;
+    /* margin-left:20%; */
+    margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 /* button styling */
 button{
@@ -52,13 +57,13 @@ button:hover{
     display: block;
     width: 500px;
     height: 700px;
-    /* display: flex; */
 }
+/* Set standard image size, crop images if I can */
 img{
     width: 300px;
     height: 500px;
-    /* margin-left: 100px; */
 }
+/* create flex rules for character cards */
 .character-section{
     display: flex;
 align-items: center;
@@ -68,14 +73,25 @@ align-items: center;
     text-align: center;
     font-family: monospace;
     font-size: 18px;
-    padding-top: 15px
+    margin-top: 15px;
+    padding: 15px;
+    color: white;
 }
 .character-image{
     display: flex;
     justify-content: space-around;
-    /* display: flex;
-    flex-direction: column; */
-    /* margin-left: 20%; */
-    /* margin-left: 100px;
-    margin-right: 100px; */
+    /* For some reason, only the about image is not obeying the space arond property */
+}
+/* create media query to change the display properties if the screen is below 600px width */
+@media screen and (max-width: 600px){
+    body{
+        background-color: white;
+    }
+    button{
+        width: 75px;
+        font-size: 14px;
+    }
+    .character-info{
+        font-size: 14px;
+    }
 }
