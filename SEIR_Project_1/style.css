@@ -9,7 +9,7 @@ img{
     height: 500px;
 }
 .character-section{
-    display: block;
+    /* display: none; */
 }
 character-image{
     display: flex;
