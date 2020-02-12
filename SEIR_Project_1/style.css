@@ -1,18 +1,81 @@
-*{
-    border: 1px solid black;
-}
+/* *{
+    border: 1px solid red;
+} */
 body{
     background-color: darkgrey;
+}
+/* header styling */
+header{
+    text-align: center;
+    font-family: 'Concert One', cursive;
+}
+/* setting sizes for page elements */
+#main{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+#flex-container{
+    width: 100%;
+    margin: auto;
+}
+aside{
+    width: 100%;
+}
+#character-buttons{
+    width: 60%;
+    height: 100px;
+    margin-left:20%;
+    display: flex;
+    justify-content: space-between;
+}
+/* button styling */
+button{
+    border: 1px solid gold;
+    border-radius: 10px;
+    width: 175px;
+    padding: 10px;
+    background-color: black;
+    color: yellow;
+    font-size: 20px;
+    font-family: 'Space Mono', monospace;
+}
+button:hover{
+    color: lightblue;
+    border: 1px solid lightblue;
+}
+/* set size of div that contains character card */
+#card-container{
+    margin: auto;
+    margin-top: 15px;
+    display: block;
+    width: 500px;
+    height: 700px;
+    /* display: flex; */
 }
 img{
     width: 300px;
     height: 500px;
+    /* margin-left: 100px; */
 }
 .character-section{
-    /* display: none; */
-}
-character-image{
     display: flex;
-    flex-direction: column;
-    margin-left: auto;
+align-items: center;
+}
+.character-info{
+    height: 185px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
+    padding-top: 15px
+}
+.character-image{
+    display: flex;
+    justify-content: space-around;
+    /* display: flex;
+    flex-direction: column; */
+    /* margin-left: 20%; */
+    /* margin-left: 100px;
+    margin-right: 100px; */
 }
