@@ -1,6 +1,7 @@
 
 // Summary:
     // Initially wanted to refactor the code to run off of one on-click listener and plug/play the character name into the link like we did with the NYPD complaints app. However, I couldn't make the "one" universal function work properly, and went for a less dry but working approach to give each button a specific ajax call inside of a click event listener.
+
 //declare cards in global scope
 const $about = $('#about');
 const $anakin = $('#anakin');
@@ -8,13 +9,16 @@ const $quiGon = $('#qui-gon');
 const $darthMaul = $('#darth-maul');
 const $grievous = $('#grievous');
 const $dooku = $('#dooku');
+//set flex-container to jquery object
 const $container = $('#flex-container');
 
 
 
 $(() => {
     $flexContainer = $('#flex-container');
+    //ensure that on page ready all of the cards are hidden
     $('.character-section').css('display', 'none');
+    //ensure that the about page is displayed first on page load
     $('#about-info').css('background-color', 'black');
     $('#about').css('display', 'block');
     //about button on click function
@@ -24,6 +28,12 @@ $(() => {
         $('.character-section').css('display', 'none');
         $('#about').css('display', 'block');
     })
+    /*
+        On click functions:
+        1. Hide any previously displayed section
+        2. Pull information from API, concatenate into string
+        3. Display the current card 
+    */
     //anakin on click function
     $('#anakinBtn').on('click', (event) => {
         event.preventDefault();
@@ -43,6 +53,7 @@ $(() => {
             },
             () => {
                 console.log('This isn\'t Tatooine!');
+                //what to display if SWAPI is down again
                 $anakinInfo = $('#anakin-info');
                 $anakinInfo.css('background-color', 'black');
                 $anakinInfo.text(`API unable to load, data was not able to be pulled`)
@@ -69,6 +80,7 @@ $(() => {
             },
             () => {
                 console.log('This isn\'t Tatooine!');
+                //what to display if SWAPI is down again
                 $quiGonInfo = $('#quigon-info');
                 $quiGonInfo.css('background-color', 'black');
                 $quiGonInfo.text(`API unable to load, data was not able to be pulled`)
@@ -91,9 +103,11 @@ $(() => {
                 $darthMaulInfo.text(
                     `${data.name}, born in ${data.birth_year}, was the ominous agent of the Sith during Episode I. From the planet of Dathomir, much of Darth Maul's origin is explained in the extended literature including his brutally aggressive combat style. Brutal enough to bring down Qui-Gon Jinn.`
                 );
-                $darthMaul.css('display', 'block');            },
+                $darthMaul.css('display', 'block');
+            },
             () => {
                 console.log('This isn\'t Tatooine!');
+                //what to display if SWAPI is down again
                 $darthMaulInfo = $('#darthmaul-info');
                 $darthMaulInfo.text(`API unable to load, data was not able to be pulled`)
                 $darthMaulInfo.css('background-color', 'black');
@@ -119,6 +133,7 @@ $(() => {
             },
             () => {
                 console.log('This isn\'t Tatooine!');
+                //what to display if SWAPI is down again
                 $grievousInfonInfo = $('#grievous-info');
                 $grievousInfo.css('background-color', 'black');
                 $grievousInfo.text(`API unable to load, data was not able to be pulled`)
@@ -144,6 +159,7 @@ $(() => {
             },
             () => {
                 console.log('This isn\'t Tatooine!');
+                //what to display if SWAPI is down again
                 $dookuInfo = $('#dooku-info');
                 $dookuInfo.css('background-color', 'black');
                 $dookuInfo.text(`API unable to load, data was not able to be pulled`)
