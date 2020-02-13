@@ -11,3 +11,6 @@ My project:
 3. Each button pulls up its own character page, and hides the other character pages.
 4. On page load, the site will automaticaly display the "About" card so users aren't met with a blank landing page.
 3. Easter eggs! Each character's picture links to something fun.    
+
+NOTE:
+1. SWAPI is an API that requires I register a URL for specific use. Therefore, Arthur told me to install a CORS unblock extension and that's how I will be presenting the projec to class. 
