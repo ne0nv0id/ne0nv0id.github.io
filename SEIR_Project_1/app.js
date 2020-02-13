@@ -1,7 +1,3 @@
-
-// Summary:
-    // Initially wanted to refactor the code to run off of one on-click listener and plug/play the character name into the link like we did with the NYPD complaints app. However, I couldn't make the "one" universal function work properly, and went for a less dry but working approach to give each button a specific ajax call inside of a click event listener.
-
 //declare cards in global scope
 const $about = $('#about');
 const $anakin = $('#anakin');
@@ -21,6 +17,7 @@ $(() => {
     //ensure that the about page is displayed first on page load
     $('#about-info').css('background-color', 'black');
     $('#about').css('display', 'block');
+
     //about button on click function
     $('#aboutBtn').on('click', (event) => {
         event.preventDefault();
@@ -32,8 +29,9 @@ $(() => {
         On click functions:
         1. Hide any previously displayed section
         2. Pull information from API, concatenate into string
-        3. Display the current card 
+        3. Display the current card
     */
+
     //anakin on click function
     $('#anakinBtn').on('click', (event) => {
         event.preventDefault();
@@ -60,8 +58,8 @@ $(() => {
                 $anakin.css('display', 'block')
             }
         )
-
     })
+
     //quigon on click function
     $('#quiGonBtn').on('click', (event) => {
         event.preventDefault()
@@ -87,8 +85,8 @@ $(() => {
                 $quiGon.css('display', 'block')
             }
         )
-
     })
+
     //darth maul on click function
     $('#darthMaulBtn').on('click', (event) => {
         event.preventDefault()
@@ -115,6 +113,7 @@ $(() => {
             }
         )
     })
+
     //grievous on click function
     $('#grievousBtn').on('click', (event) => {
         event.preventDefault()
@@ -141,6 +140,7 @@ $(() => {
             }
         )
     })
+
     //dooku on click function
     $('#dookuBtn').on('click', (event) => {
         event.preventDefault()
@@ -166,6 +166,5 @@ $(() => {
                 $dooku.css('display', 'block')
             }
         )
-
     })
 })
