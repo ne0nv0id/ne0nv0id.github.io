@@ -20,7 +20,7 @@ $(() => {
     //about button on click function
     $('#aboutBtn').on('click', (event) => {
         event.preventDefault();
-        console.log("landing page reached");
+        // console.log("landing page reached");
         $('.character-section').css('display', 'none');
         $('#about').css('display', 'block');
     })
@@ -28,12 +28,12 @@ $(() => {
     $('#anakinBtn').on('click', (event) => {
         event.preventDefault();
         $('.character-section').css('display', 'none');
-        console.log('anakin click');
+        // console.log('anakin click');
         $.ajax({
             url:'https://swapi.co/api/people/11'
         }).then(
             (data) => {
-                console.log(data.name);
+                // console.log(data.name);
                 $anakinInfo = $('#anakin-info');
                 $anakinInfo.css('background-color', 'black');
                 $anakinInfo.text(
@@ -59,7 +59,7 @@ $(() => {
             url:'https://swapi.co/api/people/32'
         }).then(
             (data) => {
-                console.log(data.name);
+                // console.log(data.name);
                 $quiGonInfo = $('#quigon-info');
                 $quiGonInfo.css('background-color', 'black');
                 $quiGonInfo.text(
@@ -85,15 +85,13 @@ $(() => {
             url:'https://swapi.co/api/people/44'
         }).then(
             (data) => {
-                console.log(data.name);
+                // console.log(data.name);
                 $darthMaulInfo = $('#darthmaul-info');
                 $darthMaulInfo.css('background-color', 'black');
                 $darthMaulInfo.text(
                     `${data.name}, born in ${data.birth_year}, was the ominous agent of the Sith during Episode I. From the planet of Dathomir, much of Darth Maul's origin is explained in the extended literature including his brutally aggressive combat style. Brutal enough to bring down Qui-Gon Jinn.`
                 );
-                $darthMaul.css('display', 'block');
-                // $flexContainer.append($anakin);
-            },
+                $darthMaul.css('display', 'block');            },
             () => {
                 console.log('This isn\'t Tatooine!');
                 $darthMaulInfo = $('#darthmaul-info');
@@ -111,14 +109,13 @@ $(() => {
             url:'https://swapi.co/api/people/79'
         }).then(
             (data) => {
-                console.log(data.name);
+                // console.log(data.name);
                 $grievousInfo = $('#grievous-info');
                 $grievousInfo.css('background-color', 'black');
                 $grievousInfo.text(
                     `General ${data.name}, birth year ${data.birth_year}, is the only one in this list that had no capabilities with the force. Not much is known about him, but Grievous belonged to a warrior tribe of hominid aliens, and was equipped with his cybernetic parts by the Empire - sent after Republic/Jedi targets by Dooku himself.`
                 );
                 $grievous.css('display', 'block');
-                // $flexContainer.append($anakin);
             },
             () => {
                 console.log('This isn\'t Tatooine!');
@@ -137,14 +134,13 @@ $(() => {
             url:'https://swapi.co/api/people/67'
         }).then(
             (data) => {
-                console.log(data.name);
+                // console.log(data.name);
                 $dookuInfo = $('#dooku-info');
                 $dookuInfo.css('background-color', 'black');
                 $dookuInfo.text(
                     `${data.name} Tyrannus, born in ${data.birth_year}, was Palpatine's direct disciple for Episodes I-III. Dooku, while powerful, continued to disobey the Sith's Rule of Two which led Palpatine to believe Dooku would attempt a coup. Therefore, Palpatine orchestrated Dooku's assassination in Episode 3.`
                 );
                 $dooku.css('display', 'block');
-                // $flexContainer.append($anakin);
             },
             () => {
                 console.log('This isn\'t Tatooine!');

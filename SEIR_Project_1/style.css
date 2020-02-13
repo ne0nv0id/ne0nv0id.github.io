@@ -85,7 +85,7 @@ align-items: center;
 /* create media query to change the display properties if the screen is below 600px width */
 @media screen and (max-width: 600px){
     body{
-        background-color: white;
+        background-color: #212120;
     }
     button{
         width: 75px;
@@ -93,5 +93,6 @@ align-items: center;
     }
     .character-info{
         font-size: 14px;
+        height: 125px;
     }
 }
